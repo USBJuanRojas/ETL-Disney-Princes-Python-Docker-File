@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 #path = kagglehub.dataset_download("C:\Users\jroja\OneDrive\Documents\big data\Act 1 Cort 3")
 
-df = pd.read_csv("C:/Users/jroja/OneDrive/Documents/big data/Act 1 Cort 3/disney_princess.csv")
+df = pd.read_csv("disney_princess.csv")
 dfc = df.copy()
 
 dfc.drop([
@@ -29,11 +29,3 @@ data_dict = dfc.to_dict("records")
 
 collection.insert_many(data_dict)
 print("Datos insertados en MongoDB")
-
-
-
-#Dockerfile
-
-
-
-
